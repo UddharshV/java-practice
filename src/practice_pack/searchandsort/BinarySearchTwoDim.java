@@ -21,7 +21,6 @@ public class BinarySearchTwoDim {
             else if(target < arr[row][col]){
                 //ignore the elements below arr[row][col] as all elements in this column are sorted and greater than arr[row][col]
                 col--;
-                continue;
             }
             else { //target > arr[row][col]
                 //ignore the elements to the left side of arr[row][col] as all elements in this column are sorted and smaller than arr[row][col]
