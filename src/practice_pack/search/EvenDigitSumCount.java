@@ -1,4 +1,4 @@
-package practice_pack.leetcode_prep;
+package practice_pack.search;
 
 public class EvenDigitSumCount {
     public static void main(String[] args) {

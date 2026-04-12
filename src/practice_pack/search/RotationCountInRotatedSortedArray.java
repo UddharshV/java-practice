@@ -1,4 +1,4 @@
-package practice_pack.searchandsort;
+package practice_pack.search;
 
 public class RotationCountInRotatedSortedArray {
     //https://www.geeksforgeeks.org/dsa/find-rotation-count-rotated-sorted-array/

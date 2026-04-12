@@ -1,4 +1,4 @@
-package practice_pack.leetcode_prep;
+package practice_pack.search;
 // https://leetcode.com/problems/find-numbers-with-even-number-of-digits
 import java.util.Scanner;
 

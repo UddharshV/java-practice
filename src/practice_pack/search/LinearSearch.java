@@ -1,4 +1,4 @@
-package practice_pack.searchandsort;
+package practice_pack.search;
 
 import java.util.Scanner;
 
@@ -11,11 +11,12 @@ public class LinearSearch {
             arr[i] = sc.nextInt();
         System.out.println("Enter the element to be searched for: ");
         int key = sc.nextInt();
-        int index = performLinearSearch(arr, key, 0, arr.length-1);
+        int index = performLinearSearch(arr, key);
         System.out.println("The element - " + key + " was found at: " + index);
     }
 
-    static int performLinearSearch(int[] arr, int ele, int start, int end) {
+    static int performLinearSearch(int[] arr, int ele) {
+        int start = 0, end = arr.length-1;
         if(arr.length == 0)
             return -1;
         if(start > end)

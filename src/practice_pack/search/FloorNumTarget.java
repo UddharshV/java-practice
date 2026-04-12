@@ -1,16 +1,17 @@
-package practice_pack.searchandsort;
+package practice_pack.search;
 
 import java.util.Arrays;
-public class CeilNumTarget {
-    // Find the smallest number in the array which is greater than or equal to the specified target.
+
+public class FloorNumTarget {
+    // Find the largest number in the array which is smaller than or equal to the specified target.
     public static void main(String[] args) {
         int[] arr = {2,3,5,9,14,16,18};
-        int target = 5;
+        int target = -9;
         int res = performBinarySearch(arr,target);
-        if(res < arr.length)
+        if(res > 0)
             System.out.println(arr[res]);
         else
-            System.out.println("No number in given list - " + Arrays.toString(arr) + ", that is greater than the target number - " + target);
+            System.out.println("No number in given list - " + Arrays.toString(arr) + ", that is smaller than the target number: " + target);
     }
 
     static int performBinarySearch(int[] arr, int target) {
@@ -37,6 +38,6 @@ public class CeilNumTarget {
             if(arr[mid] == target)
                 return mid;
         }
-        return start;
+        return end;
     }
 }

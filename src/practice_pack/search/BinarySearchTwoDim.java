@@ -1,4 +1,4 @@
-package practice_pack.searchandsort;
+package practice_pack.search;
 
 import java.util.Arrays;
 
