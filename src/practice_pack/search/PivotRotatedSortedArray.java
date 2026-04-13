@@ -1,4 +1,4 @@
-package searchandsort;
+package practice_pack.search;
 
 public class PivotRotatedSortedArray {
     public static void main(String[] args) {
