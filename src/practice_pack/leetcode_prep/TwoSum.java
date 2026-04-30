@@ -1,20 +1,25 @@
 package practice_pack.leetcode_prep;
 
+import java.util.Arrays;
+import java.util.HashMap;
+
 public class TwoSum {
+    //https://leetcode.com/problems/two-sum/description/
     public static void main(String[] args) {
         int[] nums = {3,3};
         int target = 6;
-        for(int i = 0; i < nums.length - 1; i++){
-            int j = performOp(i,i+1, nums, target);
-            if(i != j)
-                System.out.println("[" + i + "," + j + "]");
-        }
+        int[] result = performOp(nums,target);
+        System.out.println(Arrays.toString(result));
     }
-    public static int performOp(int x, int n, int[] arr, int target){
-        for(int i = n; i < arr.length; i++){
-            if(arr[x] + arr[i] == target)
-                return i;
-        }
-        return x;
+
+    public static int[] performOp(int[] nums, int target) {
+
+        HashMap <Integer, Integer> twoSumPair = new HashMap<>();
+        for(int i=0; i<nums.length; i++)
+            if(twoSumPair.containsKey(target-nums[i]))
+                return new int[] {twoSumPair.get(target-nums[i]), i};
+            else
+                twoSumPair.put(nums[i],i);
+        return new int[] {-1, -1};
     }
 }

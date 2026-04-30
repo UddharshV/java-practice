@@ -19,11 +19,19 @@ public class Pattern31 {
         displayPattern(n);
     }
     public static void displayPattern(int n){
-        int rowMin = 0, rowMax = 2*n-1, colMin = 0, colMax = 2*n-1;
-        for(int i=n; i>=1; i--){
-            for(int j=1; j<=2*n; j++){
+        int lowerBound, upperBound, leftBound, rightBound, minBound;
+        for(int i=0; i<2*n-1; i++){
+            for(int j=0; j<2*n-1; j++){
+                lowerBound = i;
+                upperBound = 2*n-2-i;
+                leftBound = j;
+                rightBound = 2*n-2-j;
 
+                minBound = Math.min(Math.min(Math.min(lowerBound, upperBound), leftBound), rightBound);
+
+                System.out.print(n-minBound + " ");
             }
+            System.out.println();
         }
     }
 }
