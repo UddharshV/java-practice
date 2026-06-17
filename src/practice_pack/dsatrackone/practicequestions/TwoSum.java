@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSum {
+    //https://leetcode.com/problems/two-sum/description/
+    //Date solved and submitted: June 16, 2026
+    //Concepts learnt: Hashmaps and Arrays
     private static int[] solTwoSumBruteForce(int[] nums, int target) {
         /*
         Brute-Forced Approach:
@@ -40,6 +43,7 @@ public class TwoSum {
             2. Does the introduction of hashmap negatively affect the time complexity? No, containsKey() and get() are both O(1) average-case operations
             3. Why not use an ArrayList? Lookup speed: O(n) for contains and indexOf() -> Effectively makes the time complexity: O(n^2) - same as brute force with extra memory overhead and more complex code
                 Also, the value -> index mappings cannot be expressed cleanly in an ArrayList -> no direct way to retrieve the index of a specific value
+            4. Why not use a HashSet? HashSet can detect if a complement is present in it. However, we have no way to retrieve its original index to build the result array
          */
     }
     private static void displayResult(int[] indices){
@@ -47,11 +51,8 @@ public class TwoSum {
     }
 
     public static void main(String[] args) {
-        //https://leetcode.com/problems/two-sum/description/
-        //[2,7,11,15]
-        int[] nums = new int[]{3, 3};
-        //9
-        int target = 6;
+        int[] nums = new int[]{3, 3}; //Example: [2,7,11,15]
+        int target = 6; //Example: 9
         int[] indices = solTwoSumOptimized(nums, target);
         displayResult(indices);
     }
